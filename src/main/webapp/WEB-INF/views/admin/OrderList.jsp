@@ -25,10 +25,10 @@
 				<tr>
 					<th class="ocol ocol0"><input type="checkbox" id="checkAll" name="all"></th>
 					<th class="ocol ocol1">순서</th>
-					<th class="ocol ocol2">상품명</th>
-					<th class="ocol ocol3">주문수량</th>
 					<th class="ocol ocol4">구매자</th>
+					<th class="ocol ocol2">상품명</th>
 					<th class="ocol ocol5">단가</th>
+					<th class="ocol ocol3">주문수량</th>
 					<th class="ocol ocol6">결제금액</th>
 					<th class="ocol ocol7">결제일</th>
 					<th class="ocol ocol8">주문상태</th>
@@ -50,6 +50,11 @@
 							<th class="ocol ocol1 orderDetail">
 			    				<input type="text" name="rn" value="${order.rn}" class="num " readonly="readonly" style="text-align: center;">
 			    			</th>
+			    			<th class="ocol ocol4 orderDetail">
+			    				<input type="text" name="m_name" value="${order.m_name}(${order.mem_id})"
+			    					class="num " readonly="readonly" style="text-align: center;">
+								<input type="hidden" name="mem_id" value="${order.mem_id}" readonly="readonly">
+			    			</th>
 							<th class="ocol ocol2 orderDetail">
 								<input type="text" name="p_name" value="${order.p_name}"
 			    					class="" readonly="readonly" 
@@ -58,21 +63,16 @@
 								<input type="hidden" name="o_no" value="${order.o_no}" readonly="readonly">
 								<input type="hidden" name="mem_id" value="${order.mem_id}" readonly="readonly">
 			    			</th>
+			    			<th class="ocol ocol5 orderDetail">
+			    				<input type="text" name="price" value="${order.price}원"
+			    					class="num " readonly="readonly" style="text-align: center;">
+			    			</th>
 			    			<th class="ocol ocol3 orderDetail">
 			    				<input type="text" name="quantity" value="${order.quantity}"
 			    					class="num " readonly="readonly" style="text-align: center;">
 			    			</th>
-			    			<th class="ocol ocol4 orderDetail">
-			    				<input type="text" name="m_name" value="${order.m_name}(${order.mem_id})"
-			    					class="num " readonly="readonly" style="text-align: center;">
-								<input type="hidden" name="mem_id" value="${order.mem_id}" readonly="readonly">
-			    			</th>
-			    			<th class="ocol ocol5 orderDetail">
-			    				<input type="text" name="price" value="${order.price}"
-			    					class="num " readonly="readonly" style="text-align: center;">
-			    			</th>
 			    			<th class="ocol ocol6 orderDetail">
-			    				<input type="text" name="amount" value="${order.amount}"
+			    				<input type="text" name="order_amount" value="${order.amount}원"
 			    					class="num " readonly="readonly" style="text-align: center;">
 			    			</th>
 			    			<th class="ocol ocol7 orderDetail">
@@ -101,7 +101,7 @@
 		</table>
 		
 		 <!-- 페이지  -->
-	     <div align="center">
+	     <div class="O_page" align="center">
 	     <c:if test="${pgVo.startPg>PBlock}">
 		     <font color="4c5317">
 		         <a href="/orderFIX?curPg=${pgVo.startPg-PBlock}&curBl=${pgVo.curBl-1}">[이전]</a>

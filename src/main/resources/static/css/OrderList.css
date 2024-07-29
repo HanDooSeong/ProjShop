@@ -23,14 +23,14 @@
 
 /* OrderFix */
 .ocol0 { width: 2%; }
-.ocol1 { width: 10%; }
-.ocol2 { width: 5%; }
-.ocol3 { width: 7%; }
+.ocol1 { width: 4%; }
+.ocol2 { width: 15%; }
+.ocol3 { width: 5%; }
 .ocol4 { width: 10%; }
 .ocol5 { width: 4%; }
 
-.ocol6 { width: 4%; }
-.ocol7 { width: 10%; }
+.ocol6 { width: 8%; }
+.ocol7 { width: 8%; }
 .ocol8 { width: 10%; }
 
 .ocol0 input{ width: 100%; }
@@ -119,13 +119,16 @@ input:focus, input {
     color: #999;
     background-color: #eee;
 }
+.O_page{
+	margin-top: 10px;
+}
 
 .btnArea {
 	margin-top: 20px;
 }
 
 .PageNation {
-	margin-top: 80px;
+	margin-top: 10px;
 }
 
 th.tab {

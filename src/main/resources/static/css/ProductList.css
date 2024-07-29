@@ -3,6 +3,9 @@
 ul{
 	padding: 0;
 }
+#Pg{
+	margin-top: 10px;
+}
 
 .displaynone {
     display: none;
